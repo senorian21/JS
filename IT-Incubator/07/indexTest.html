@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+       const word0 = 'Hello'
+       const word0Transletions = 'Привет'
+
+       const word1 = 'Thank you'
+       const word1Transletions = 'Спасибо'
+
+       const word2 = 'Goodbye'
+       const word2Transletions = 'Пока'
+
+       const wordsCount = 3
+
+       let userCorrectAnswer = 0
+
+       const correctAnswersMinPrecent = 40
+
+       let userAnswer0 = prompt(word0)
+       window.document.write('Пользователь ответил: ' + userAnswer0, '<br>')
+       if (userAnswer0 === word0Transletions){
+        userCorrectAnswer++
+       }
+
+       let userAnswer1 = prompt(word1)
+       document.write('Пользователь ответил: ' + userAnswer1, '<br>')
+       if (userAnswer1 === word1Transletions){
+        userCorrectAnswer++
+       }
+
+       let userAnswer2 = prompt(word2)
+       document.write('Пользователь ответил: ' + userAnswer2, '<br>')
+       if (userAnswer2 === word2Transletions){
+        userCorrectAnswer++
+       }
+
+       let userCorrectPrecentAnswer = userCorrectAnswer / wordsCount * 100
+
+       if (userCorrectPrecentAnswer > correctAnswersMinPrecent){
+        document.write('Отлично, вы справились!' , '<br>')
+       } else {
+        document.write('Неплохо, но вы можете лучше. Попробуйте еще раз!' , '<br>')
+       }
+
+        </script>
+</body>
+</html>

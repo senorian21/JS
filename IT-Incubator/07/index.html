@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+        const word0 = 'Wassup';
+        const word0Transletions = 'Привет';
+
+        const word1 = 'Bye';
+        const word1Transletions = 'Пока';
+
+        const word2 = 'Help';
+        const word2Transletions = 'Помощь';
+
+
+        const wordsCount = 3;
+
+        
+        const finishSuccessMessage = 'Молодец';
+        const finishUnSuccessMessage = 'Молодец, постарайся лучше в след раз';
+
+
+        const correctAnswersMinPersent = 50;
+
+
+
+        let correctAnswersCount = 0;
+
+        
+
+
+        
+
+
+        const userAnswer0 = prompt(word0);
+        alert(userAnswer0 === word0Transletions);
+        if (userAnswer0 === word0Transletions){
+            correctAnswersCount++;
+        }
+        const userAnswer1 = prompt(word1);
+        alert(userAnswer1 === word1Transletions);
+        if (userAnswer1 === word1Transletions){
+            correctAnswersCount++;
+        }
+
+        const userAnswer2 = prompt(word2);
+        alert(userAnswer2 === word2Transletions);
+        if (userAnswer2 === word2Transletions){
+            correctAnswersCount++;
+        }
+
+        const userCorrectAnswerPrecent = correctAnswersCount / wordsCount * 100;
+        
+        if(userCorrectAnswerPrecent * 100 > correctAnswersMinPersent){
+            alert(finishSuccessMessage)
+        } else{
+            alert(finishUnSuccessMessage)
+        }
+
+       
+
+
+
+        </script>
+</body>
+</html>

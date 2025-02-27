@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        // -------- functions
+        function showHelloMessage(_notificationMessages) {
+            document.write(_notificationMessages.start.hello, '<br>')
+        }
+        function getPercentage(_result, _words) {
+            return _result.userCorrectAnswer / _words.length * 100
+        }
+        function startTraining(_words, _result, _mistakeWords) {
+            for (let i = 0; i < _words.length; i++) {
+                let userAnswer = prompt(_words[i].original)
+                document.write('Пользователь ответил: ' + userAnswer, '<br>')
+                console.log(userAnswer === _words[i].translations)
+                if (userAnswer === _words[i].translations) {
+                    _result.userCorrectAnswer++
+                } else {
+                    _mistakeWords.push(_words[i])
+                }
+            }
+        }
+        function showResult(_result, _words, _settings, _notificationMessages) {
+            let userCorrectPrecentAnswer = getPercentage(_result, _words)
+
+            if (userCorrectPrecentAnswer > _settings.correctAnswersMinPrecent) {
+                document.write(_notificationMessages.result.finishSuccess, '<br>')
+            } else {
+                document.write(_notificationMessages.result.finishUnSuccess, '<br>')
+            }
+        }
+        function showMistake(_notificationMessages,_mistakeWords) {
+            if (_mistakeWords.length === 0) {
+            document.write(_notificationMessages.result.finishNoMistake, '<br>')
+
+        } else {
+            document.write(_notificationMessages.result.finishMistake, '<br>')
+            for (let i = 0; i < _mistakeWords.length; i++) {
+                document.write('Слово: ', _mistakeWords[i].original, ' Перевод: ',
+                    _mistakeWords[i].translations, '<br>')
+            }
+        }
+        }
+       
+        // --------- data
+        const words = [
+            {
+                original: 'Hello',
+                translations: 'Привет',
+            },
+            {
+                original: 'Thank you',
+                translations: 'Спасибо',
+            },
+            {
+                original: 'Goodbye',
+                translations: 'Пока',
+            },
+            {
+                original: 'Laptop',
+                translations: 'Ноутбук',
+            },
+            {
+                original: 'Screen',
+                translations: 'Экран',
+            },
+
+        ]
+        let mistakeWords = []
+        const notificationMessages = {
+            start: {
+                hello: 'Привет, удачи в изучении англиского',
+            },
+            result: {
+                finishSuccess: 'Отлично, вы справились!',
+                finishUnSuccess: 'Неплохо, но вы можете лучше. Попробуйте еще раз!',
+                finishNoMistake: 'Вы не допустили ошибки',
+                finishMistake: 'Слова в которых вы допустили ошибки',
+
+            }
+        }
+        const settings = {
+            correctAnswersMinPrecent: 40,
+        }
+        const result = {
+            userCorrectAnswer: 0,
+        }
+
+
+        // --------- main
+        showHelloMessage(notificationMessages)
+        startTraining(words, result, mistakeWords)
+        showResult(result,words,settings,notificationMessages)
+        showMistake(notificationMessages, mistakeWords)
+
+
+    </script>
+</body>
+
+</html>

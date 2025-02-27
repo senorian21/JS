@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        document.write('Старт', '<br>')
+
+        let balanceString = prompt('Введдите ваш баланс')
+        let balance = Number(balanceString)
+
+        if (isNaN(balance)) {
+            document.write('Вы ввели неправильное число', '<br>')
+            let balanceString = prompt('Введите правильное число')
+            let balance = Number(balanceString)
+            if (isNaN(balance)) {
+                document.write('Вы ввели неправильное число', '<br>')
+            }
+        }
+
+
+        let product1CostString = prompt('Сколько стоит первый продукт?')
+        //const product1Cost = +product1CostString // Первый способ переводить строку в число
+        const product1Cost = Number(product1CostString) //Второй способ переводить строку в число
+
+        if (isNaN(product1Cost)) {
+            document.write('Вы ввели неправильное число', '<br>')
+            let product1CostString = prompt('Введите правильное число')
+            const product1Cost = Number(product1CostString)
+            if (isNaN(product1Cost)) {
+                document.write('Вы ввели неправильное число', '<br>')
+            }
+        }
+
+
+        let product2CostString = prompt('Сколько стоит второй продукт?')
+        //const product1Cost = +product1CostString // Первый способ переводить строку в число
+        const product2Cost = Number(product2CostString) //Второй способ переводить строку в число
+
+        if (isNaN(product2Cost)) {
+            document.write('Вы ввели неправильное число', '<br>')
+            let product2CostString = prompt('Введите правильное число')
+            const product2Cost = Number(product2CostString)
+            if (isNaN(product2Cost)) {
+                document.write('Вы ввели неправильное число', '<br>')
+            }
+        }
+
+
+        let product3CostString = prompt('Сколько стоит третий продукт?')
+        //const product1Cost = +product1CostString // Первый способ переводить строку в число
+        const product3Cost = Number(product3CostString) //Второй способ переводить строку в число
+
+        if (isNaN(product3Cost)) {
+            document.write('Вы ввели неправильное число', '<br>')
+            let product3CostString = prompt('Введите правильное число')
+            const product3Cost = Number(product3CostString)
+            if (isNaN(product3Cost)) {
+                document.write('Вы ввели неправильное число', '<br>')
+            }
+        }
+
+
+        
+            let userShoppingContinueString = prompt('Вы хотите купить первый продукт 1 - Да 2 - Нет')
+            
+            if (userShoppingContinueString === '1') {
+                if (balance >= product1Cost){
+                    document.write('Вы купили первый продукт', '<br>')
+                balance -= product1Cost
+                } else {
+                document.write('Вам не хватило денег на первый товар', '<br>')
+            } 
+            } 
+            let userShoppingContinue2String = prompt('Вы хотите купить второй продукт 1 - Да 2 - Нет')
+            
+            if (userShoppingContinue2String === '1') {
+                if (balance >= product2Cost){
+                    document.write('Вы купили второй продукт', '<br>')
+                balance -= product2Cost
+            } else {
+                document.write('Вам не хватило денег на второй товар', '<br>')
+            }
+            } 
+
+
+            let userShoppingContinue3String = prompt('Вы хотите купить третий продукт 1 - Да 2 - Нет')
+            
+            if (userShoppingContinue3String === '1') {
+                if (balance >= product3Cost) {
+                    document.write('Вы купили третий продукт', '<br>')
+                balance -= product3Cost
+                }else {
+                document.write('Вам не хватило денег на второй товар', '<br>')
+            }
+            } 
+
+
+            document.write('Оставшиеся деньги на балансе: ' + balance, '<br>')
+
+        
+
+
+
+        document.write('Конец', '<br>')
+
+
+
+
+    </script>
+</body>
+
+</html>

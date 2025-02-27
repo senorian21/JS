@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const repitCount = 3
+
+        for (let index = 1; index <= repitCount; index++) {
+            document.write('a', '<br>')
+        }
+
+
+
+        let grades = [1, 2, 3, 4, 5, 6]
+        for (let i = 0; i < grades.length; i++) {
+            if (grades[i] >= 4) {
+                document.write(grades[i], '<br>')
+
+            }
+
+        }
+        document.write('----------------------------------------------', '<br>')
+        let books = ['Война миров', 'Игра престолов', 'Колобок', 'Пэпи длиный чулок']
+        for (let i = 0; i < books.length; i++) {
+            document.write(books[i], '<br>')
+        }
+        document.write('----------------------------------------------', '<br>')
+
+        let person = [
+            {
+                name: 'Ilya',
+                secondName: 'Kozlovski',
+                bithYear: 2004
+            },
+            {
+                name: 'Yaroslav',
+                secondName: 'Valushko',
+                bithYear: 2003
+            },
+            {
+                name: 'Pavel',
+                secondName: 'Gonebny',
+                bithYear: 2004
+            }
+        ]
+        for (let i = 0; i < person.length; i++) {
+            if (person[i].bithYear === 2004) {
+                document.write(person[i].name + ' ' + person[i].secondName, '<br>')
+            }
+        }
+
+        document.write('----------------------------------------------', '<br>')
+
+
+        let shoppingLists = [
+            ['Молоко', 'Хлеб', 'Яйца'],
+            ['Шампунь', 'Мыло', 'Гель'],
+            ['Корм для собаки', 'Игрушки для собаки', 'Подушка для собаки']
+        ]
+
+        for (let i = 0; i < shoppingLists.length; i++) {
+            let subArray = shoppingLists[i]
+            document.write('СПИСОК - ', i + 1, '<br>')
+            document.write('------------------', '<br>')
+            for (let j = 0; j < subArray.length; j++) {
+                let product = subArray[j]
+                document.write(j + 1, ' - ', product + ' ', '<br>')
+            }
+            document.write('<br>')
+        }
+
+
+    </script>
+</body>
+
+</html>

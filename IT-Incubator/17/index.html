@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+    let grades = [5, 7, 1, 3, 4, 6] //Масии чисел
+    // let extractedGrade = grades[5]
+    // console.log(grades[1])
+    // console.log(extractedGrade)
+    
+
+    let books = ['Война и мир', 'Мастер и маргарита', 'Преступление и наказание'] 
+    //массив строк
+    console.log(books[0])
+
+    let answers = [true, false, true, false] // Массив булевых значений
+
+    //массив обьектов
+    let persons = [
+            {
+                name: 'Ilya',
+                surname: 'Kozlovki',
+                birthYear: 2004
+            },
+            {
+                name: 'Yaroslav',
+                surname: 'Valushko',
+                birthYear: 2004
+            }
+        ]
+
+    persons[0].birthYear //обращение к дате дня рождения первого человека
+    let person1 = persons[1] //берем второй обьект из массива обьектов
+    console.log(person1)
+
+    let shoppingLists =[
+        ['Молоко', 'Хлеб','Яйца'],
+        ['Шампунь','Мыло','Гель'],
+        ['Корм для собаки','Игрушки для собаки','Подушка для собаки']
+    ]
+    shoppingLists[1][1] // обрашение к второму массиву второму элементу 
+    
+    let shoppingForDog = shoppingLists[2]
+    let dogFood = shoppingForDog[0]
+    console.log(dogFood)
+    </script>
+</body>
+
+</html>

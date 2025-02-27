@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        const words = [
+            {
+                original: 'Hello',
+                translations: 'Привет',
+            },
+            {
+                original: 'Thank you',
+                translations: 'Спасибо',
+            }, 
+            {
+                original: 'Goodbye',
+                translations: 'Пока',
+            },
+            {
+                original: 'Laptop',
+                translations: 'Ноутбук',
+            },
+            {
+                original: 'Screen',
+                translations: 'Экран',
+            },
+
+        ]
+
+        let mistakeWords = []
+        
+
+        const notificationMessages = {
+            start: {
+                hello: 'Привет, удачи в изучении англиского',
+            },
+            result: {
+                finishSuccess: 'Отлично, вы справились!',
+                finishUnSuccess: 'Неплохо, но вы можете лучше. Попробуйте еще раз!',
+            }
+        }
+
+
+        const settings = {
+            correctAnswersMinPrecent: 40,
+        }
+
+        const result = {
+            userCorrectAnswer: 0,
+        }
+
+
+        document.write(notificationMessages.start.hello, '<br>')
+
+        for (let i = 0; i < words.length; i++) {
+            let userAnswer = prompt(words[i].original)
+            document.write('Пользователь ответил: ' + userAnswer, '<br>')
+            console.log(userAnswer === words[i].translations)
+            if (userAnswer === words[i].translations) {
+                result.userCorrectAnswer++
+            } else {
+                mistakeWords.push(words[i])
+            }
+        }
+
+        let userCorrectPrecentAnswer = result.userCorrectAnswer / words.length * 100
+
+        if (userCorrectPrecentAnswer > settings.correctAnswersMinPrecent) {
+            document.write(notificationMessages.result.finishSuccess, '<br>')
+        } else {
+            document.write(notificationMessages.result.finishUnSuccess, '<br>')
+        }
+        
+        document.write('Слова в которых была допушена ошибка', '<br>')
+        for(let i = 0; i < mistakeWords.length; i++){
+            document.write('Слово: ', mistakeWords[i].original, ' Перевод: ', 
+            mistakeWords[i].translations, '<br>')
+        }
+    </script>
+</body>
+
+</html>

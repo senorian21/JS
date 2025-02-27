@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        const words = [
+                {
+                    original: 'Hello',  
+                    translations: 'Привет',
+                },
+                {
+                    original: 'Thank you',
+                    translations: 'Спасибо',
+                }, {
+                    original: 'Goodbye',
+                    translations: 'Пока',
+                },
+            ]
+
+
+        // const vocabulary = {
+        //     words: {
+        //         word0: {
+        //             original: 'Hello',
+        //             translations: 'Привет',
+        //         },
+        //         word1: {
+        //             original: 'Thank you',
+        //             translations: 'Спасибо',
+        //         },
+        //         word2: {
+        //             original: 'Goodbye',
+        //             translations: 'Пока',
+        //         },
+        //     },
+        //     wordsCount: 3,
+
+        // }
+
+        const notificationMessages = {
+            start: {
+                hello: 'Привет, удачи в изучении англиского',
+            },
+            result: {
+                finishSuccess: 'Отлично, вы справились!',
+                finishUnSuccess: 'Неплохо, но вы можете лучше. Попробуйте еще раз!',
+            }
+        }
+
+
+        const settings = {
+            correctAnswersMinPrecent: 40,
+        }
+
+        const result = {
+            userCorrectAnswer: 0,
+        }
+
+
+        document.write(notificationMessages.start.hello, '<br>')
+
+        let userAnswer0 = prompt(words[0].original)
+        window.document.write('Пользователь ответил: ' + userAnswer0, '<br>')
+        if (userAnswer0 === words[0].translations) {
+            result.userCorrectAnswer++
+        }
+
+        let userAnswer1 = prompt(words[1].original)
+        document.write('Пользователь ответил: ' + userAnswer1, '<br>')
+        if (userAnswer1 === words[1].translations) {
+            result.userCorrectAnswer++
+        }
+
+        let userAnswer2 = prompt(words[2].original)
+        document.write('Пользователь ответил: ' + userAnswer2, '<br>')
+        if (userAnswer2 === words[2].translations) {
+            result.userCorrectAnswer++
+        }
+
+        let userCorrectPrecentAnswer = result.userCorrectAnswer / words.length * 100
+
+        if (userCorrectPrecentAnswer > settings.correctAnswersMinPrecent) {
+            document.write(notificationMessages.result.finishSuccess, '<br>')
+        } else {
+            document.write(notificationMessages.result.finishUnSuccess, '<br>')
+        }
+
+    </script>
+</body>
+
+</html>
