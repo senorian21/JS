@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function countSheeps(sheep) {
+            let numberOfsheep = 0
+            for (i = 0; i < sheep.length; i++) {
+                if (sheep[i] === sheep[i]) {
+                    if (sheep[i] === true) {
+                        numberOfsheep++
+                    }
+                }
+            }
+            return numberOfsheep
+        }
+        sheep = [undefined, null, false, true];
+        console.log(countSheeps(sheep))
+    </script>
+</body>
+
+</html>
