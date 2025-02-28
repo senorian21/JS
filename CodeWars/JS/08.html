@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const rps = (p1, p2) => {
+            if (p1 === p2) {
+                return "Draw!"
+            } else if (
+                p1 === "paper" && p2 === "rock" ||
+                p1 === "scissors" && p2 === "paper" ||
+                p1 === "rock" && p2 === "scissors"
+            ) {
+                return "Player 1 won!"
+            } else {
+                return "Player 2 won!"
+            }
+        }
+
+
+
+        console.log(rps('rock', 'scissors'))
+    </script>
+</body>
+
+</html>

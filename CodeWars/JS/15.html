@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function filter_list(filter) {
+            let result = []
+            for (let i = 0; i < filter.length; i++) {
+                if (typeof filter[i] === 'number') {
+                    result.push(filter[i]);
+                }
+            }
+            return result
+        }
+
+
+        console.log(filter_list([1, 2, 'a', 'b']))
+    </script>
+</body>
+
+</html>
