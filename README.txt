@@ -1,10 +1,2 @@
-Hello 
-world
-Test
-Git'
 
-12
-12
-12
-1
-1
+Here I complete tasks to get into the IT-Incubator
