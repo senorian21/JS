@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function validatePIN(pin) {
+            if ((pin.length === 4 || pin.length === 6) && /^\d+$/.test(pin)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+
+
+        console.log(validatePIN('1111'))
+    </script>
+</body>
+
+</html>
