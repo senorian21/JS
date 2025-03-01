@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function XO(str) {
+            let strArray = str.split('')
+            let xCount = 0
+            let oCount = 0
+            for (let i = 0; i < strArray.length; i++){
+                if (strArray[i] === 'x' || strArray[i] === 'X'){
+                    xCount++
+                } else if (strArray[i] === 'o' || strArray[i] === 'O') {
+                    oCount++
+                }
+            }
+            if (xCount === oCount) {
+                return true
+            } else {
+                return false
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>
