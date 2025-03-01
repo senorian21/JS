@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function isIsogram(str) {
+            let strArray = str.toLowerCase().split('');
+            for (let i = 0; i < strArray.length; i++) {
+                for (let j = 0; j < strArray.length; j++) {
+                    if (i !== j && strArray[i] === strArray[j]) {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+
+
+
+        console.log(isIsogram("Dermatoglyphics"))
+    </script>
+</body>
+
+</html>

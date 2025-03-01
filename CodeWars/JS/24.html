@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function findShort(str){
+            let array = str.split(" ")
+            let minLengthWord = array[0].length
+            for(let i = 0; i < array.length; i++){
+                if (minLengthWord > array[i].length){
+                    minLengthWord = array[i].length
+                }
+            }
+            return minLengthWord
+        }
+
+        console.log(findShort("bitcoin take over the world maybe who knows perhaps"))
+    </script>
+</body>
+</html>

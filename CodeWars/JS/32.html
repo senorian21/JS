@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function betterThanAverage(classPoints, yourPoints) {
+            let sum = 0;
+            for (let i = 0; i < classPoints.length; i++){
+                sum+= classPoints[i]
+            }
+            let average = sum / classPoints.length
+            if (yourPoints > average){
+                return true
+            } else {
+                return false
+            }
+        }
+
+
+        console.log(betterThanAverage([100, 40, 34, 57, 29, 72, 57, 88], 76))
+
+    </script>
+</body>
+
+</html>
